@@ -1,56 +1,54 @@
-# Exemplo de código que já funciona
-def codigo():
-    cod = '''
-    
-sla = 133
-
-if sla == 13:
-    print sla
-   
-    
-    print len(str(sla))
-    
-    '''
-    return cod
 
 
 class Corrigir:
 
     def __init__(self, *args, converter=True):
-        cod = list(args)
+
+        """ O que for passado como arguemento em args vai ser tratado como uma lista, para facilitar o tratamento.
+        Amanhã vou fazer um for e pensar em ideias de tratar vários códigos ao mesmo tempo.
+        """
+
+        # cod = list()
 
         # print(f'Código(s) corrigido(s) >> {cod}')
 
         try:
-            # Abre o arquivo de texto ou o que for passado como texto.
-            x = codigo()
+
+            # Abre o arquivo de texto ou o que for passado como texto... x é todos os códigos.
 
             # Executa o texto.
-            exec(x)
+            exec(args[0])
 
-        except SyntaxError as erro:
+        # except SyntaxError as erro:
+        except SyntaxError:
+
             # Retorna a mensage de erro em str.
-            mensage = erro.msg
+            # mensage = erro.msg
+
             # retorna o print()...S2
-            pri = erro.msg[53:64]
+            # pri = erro.msg[53:64]
+
             # Me retorna o código errado em str
-            texto = erro.text
+            # texto = erro.text
+
             # Retorna a linha do erro em int
-            linha = erro.lineno
+            # linha = erro.lineno
+
             # Retorna quantas letras tem o código errado em int
-            letras = erro.offset
+            # letras = erro.offset
+
             # retorna o que tipo é, tem que estudar + n entedi direito
-            sla = erro.filename
+            # sla = erro.filename
 
             # Me retorna o print corrigido, dentro da variável test em forma de str.
-            aaa = len(mensage)
-            test = mensage[53:aaa - 1]  # Fatia a area do print('') junto com o texto entre ''
+            # aaa = len(mensage)
+            # test = mensage[53:aaa - 1]  # Fatia a area do print('') junto com o texto entre ''
 
             # O erro tem 63 letras contando de 0.
             print(f"Parênteses ausentes na chamada para 'print'. Tratando para você.\n ... Tratando erros")
             print('-----------Apartir daqui o código corrigido------------------------')
             # Cria uma lista
-            y = x.split('\n')
+            y = args[0].split('\n')
             print()
 
             #    print(texto)
@@ -91,7 +89,8 @@ class Corrigir:
 
             self.cov(conv=converter, yy=y)
 
-    def cov(self, conv, yy):
+    @staticmethod
+    def cov(conv, yy):
         # Se a pessoa não definine ele executa o código por padrão
         # yy é nossa tabela corrigida.
         # Junta a lista em uma string.
