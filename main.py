@@ -9,9 +9,8 @@ class Corrigir:
         
         O que for passado como arguemento em args vai ser tratado como uma lista, para facilitar o tratamento.
         Atualmente o código corrigi só os prints, ele acha todos os prints e escreve na linha.
-        Na ultima atualização aceita prints indentado.
-        O arquivo test.py é um exemplo de uso desse código. Execute ele e veja como funciona
-        Amanhã vou fazer um for e pensar em ideias de tratar vários códigos ao mesmo tempo.
+        Na ultima atualização aceita prints indentados.
+        O arquivo test.py é um exemplo de uso desse código. Execute ele e veja como funciona.
         """
 
         # cod = list()
