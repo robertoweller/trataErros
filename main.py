@@ -7,7 +7,7 @@ class Corrigir:
         """ Se não for passado nada para converte ele vai executar o código, mas se for passado False ele não vai executar mas
         vai aparece o print com os print corrigido normalmente.
         
-        O que for passado como arguemento em args vai ser tratado como uma lista, para facilitar o tratamento.
+        O que for passado como argumento em args vai ser tratado como uma lista, para facilitar o tratamento.
         Atualmente o código corrigi só os prints, ele acha todos os prints e escreve na linha.
         Na ultima atualização aceita prints indentados.
         O arquivo test.py é um exemplo de uso desse código. Execute ele e veja como funciona.
